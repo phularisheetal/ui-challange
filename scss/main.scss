@@ -1,3 +1,243 @@
-p {
-    color: green;
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+
+i {
+  color: lightgrey;
+
+}
+i::before {
+  font-size: 25px;
+}
+nav {
+  height :10vh;
+  border-bottom: solid 1px lightgrey;
+  display: flex;
+  align-items: center;
+  position: relative;
+  h5 {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 34px;
+    padding-top: 9px;
+    span {
+      font-size: 12px;
+      font-weight: lighter;
+    }
+  }
+}
+
+.contact {
+  width: 400px;
+  position: absolute;
+    right: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    .line {
+      color:lightgrey;
+    }
+    .phone {
+text-decoration: underline;
+    }
+}
+
+main {
+  width: 60%;
+  margin: 80px auto ;
+  border: solid 1px lightgrey;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+    .logo-addr,.btn {
+    padding: 30px;
+
+  }
+  .top-panel {
+    width: 100%;
+    border-bottom: solid 1px lightgrey;
+    display: flex;
+    height: 45%;
+    .logo-addr {
+      height: 250px;
+      width: 65%;
+      display: flex;
+      justify-content: space-around;
+      .img {
+        width:40%;
+        img {
+          width: 90%;
+          height: 90%;
+        }
+      }
+    }
+
+    .btn {
+      width:35%;
+       button {
+        color: white;
+        background: orange;
+        border: none;
+        height: 40px;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 0px 13px;
+      }
+    }
+    .addr {
+      table tr  {
+
+        td:first-child {
+          color:lightgrey;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .custom-list {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    max-height: 65%;
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 80px;
+      border-bottom: solid 1px lightgrey;
+      > div:nth-child(2)  {
+        text-align: left;
+        width:50%;
+      }
+      .doc {
+        display: flex;
+        width: 20%;
+        justify-content: space-around;
+
+        div:last-child {
+          text-align: left;
+        }
+      }
+      .icons {
+        width: 12%;
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  nav {
+    height: 12vh;
+    h5 {
+      padding-left: 10px;
+      width: 250px;
+    }
+    .contact {
+    width:50px;
+    i.fa-phone:before {
+      font-size: 35px;
+    }
+    .line, .phone {
+      display: none;
+    }
+
+  }
+}
+  main {
+    margin:0;
+    width: 100%;
+    .top-panel {
+      height: 100vh;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      .btn {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        button {
+          width: 90%;
+        }
+      }
+      .addr {
+          width:90%;
+        table tr  {
+          display: flex;
+          flex-direction: column;
+          td:first-child {
+            color:lightgrey;
+            font-size: 12px;
+          }
+        }
+      }
+      .logo-addr {
+        flex-direction: column;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          height: 95%;
+          align-items: center;
+          justify-content: initial;
+
+          .img {
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            img {
+              width: 80%;
+              height: 100%;
+            }
+          }
+      }
+    }
+    .custom-list {
+      .row {
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  //CSS
+  main {
+    width: 80%;
+    .top-panel {
+      flex-direction: column;
+      section.logo-addr {
+        width: 100%;
+      }
+      .addr table tr {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+
 }
